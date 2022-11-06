@@ -1,0 +1,36 @@
+CREATE TABLE movies (id INTEGER PRIMARY KEY, title TEXT, director TEXT, length_in_mins INTEGER, genre TEXT, production_company TEXT, box_office_gross INTEGER);
+
+
+INSERT into movies VALUES (1, "Eyes Wide Shut", "Stanley Kubrick", 159, "Psychological drama", "Stanley Kubrick Productions", 162100000);
+INSERT into movies VALUES (2, "Hereditary", "Ari Aster", 127, "Horror", "A24", 80000000);
+INSERT into movies VALUES (3, "The Avengers", "Joss Whedon", 143, "Superhero", "Marvel Studios", 1519000000);
+INSERT into movies VALUES (4, "The Pianist", "Roman Polanski", 150, "War drama", "Canal+", 120100000);
+INSERT into movies VALUES (5, "The Dark Knight", "Christopher Nolan", 152, "Superhero", "Warner Bros. Pictures", 1006000000);
+INSERT into movies VALUES (6, "Up", "Pete Docter", 96, "Animated", "Disney/Pixar", 735100000);
+INSERT into movies VALUES (7, "Star Wars: Episode IV - A New Hope", "George Lucas", 121, "Science fiction", "Lucasfilm Ltd.", 775800000);
+INSERT into movies VALUES (8, "Dune", "Denis Villeneuve", 156, "Science fiction", "Legendary Pictures", 401800000);
+INSERT into movies VALUES (9, "Pineapple Express", "David Gordon Green", 112, "Comedy", "Columbia Pictures", 102400000);
+INSERT into movies VALUES (10, "Evil Dead", "Sam Raimi", 85, "Horror", "Renaissance Pictures", 29400000);
+INSERT into movies VALUES (11, "The Exorcist", "William Friedkin", 122, "Horror", "Hoya Productions", 441300000);
+INSERT into movies VALUES (12, "Reservoir Dogs", "Quentin Tarantino", 99, "Crime", "Live America Inc.", 2900000);
+INSERT into movies VALUES (13, "The Godfather", "Francis Ford Coppola", 175, "Crime", "Paramount Pictures", 250000000);
+INSERT into movies VALUES (14, "Scarface", "Brain De Palma", 170, "Crime", "Universal Pictures", 66000000);
+INSERT into movies VALUES (15, "The Shining", "Stanley Kubrick", 146, "Horror", "The Producer Circle Company", 47300000);
+
+-- displaying the data ordered by box office gross
+
+SELECT * FROM movies 
+ORDER BY box_office_gross desc;
+
+
+-- average box office gross of crime movies
+
+SELECT AVG(box_office_gross) FROM movies WHERE genre = "Crime";
+
+
+-- what are the five longest movies? 
+
+SELECT title, length_in_mins 
+FROM movies
+ORDER BY length_in_mins desc
+LIMIT 5;

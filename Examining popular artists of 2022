@@ -1,0 +1,170 @@
+/* Tables for singers, singles, and albums. 
+
+CREATE TABLE singers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    age INTEGER,
+    country TEXT);
+    
+INSERT INTO singers (name, age, country) VALUES ("Drake", 37, "Canada");
+INSERT INTO singers (name, age, country) VALUES ("The Weeknd", 33, "Canada");
+INSERT INTO singers (name, age, country) VALUES ("Ariana Grande", 30, "United States");
+INSERT INTO singers (name, age, country) VALUES ("Harry Styles", 29, "United Kingdom");
+INSERT INTO singers (name, age, country) VALUES ("Andrea Bocelli", 65, "Italy");
+INSERT INTO singers (name, age, country) VALUES ("Shakira", 46, "Colombia");
+
+CREATE TABLE singles_2022 (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    artist_id INTEGER,
+    title TEXT,
+    hot_100_peak INTEGER,
+    album_id TEXT);
+    
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak, album_id) VALUES (1, "Sticky", 6, 1);
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak, album_id) VALUES (1, "Massive", 14, 1);
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak, album_id) VALUES (1, "Jimmy Cooks", 1, 1);
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak, album_id) VALUES (1, "Circo Loco", 8, 2);
+
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak, album_id) VALUES (2, "Sacrifice", 11, 3);
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak, album_id) VALUES (2, "Out of Time", 32, 3);
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak, album_id) VALUES (2, "Less Than Zero", 53, 3);
+INSERT INTO singles_2022 (artist_id, title) VALUES (2, "Nothing Is Lost");
+
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak, album_id) VALUES (4, "As It Was", 1, 4);
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak, album_id) VALUES (4, "Late Night Talking", 3, 4);
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak, album_id) VALUES (4, "Music for a Sushi Restaurant", 8, 4);
+
+INSERT INTO singles_2022 (artist_id, title, album_id) VALUES (6, "Don't You Worry", 5);
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak) VALUES (6, "Te Felecito", 67);
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak) VALUES (6, "Monotonia", 65);
+
+
+CREATE TABLE albums (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT,
+    billboard_200_peak INTEGER,
+    RIAA_certification TEXT,
+    artist_id INTEGER);
+    
+INSERT INTO albums (title, billboard_200_peak, RIAA_certification, artist_id) VALUES ("Honestly, Nevermind", 1, "1x Platinum", 1);
+INSERT INTO albums (title, billboard_200_peak, RIAA_certification, artist_id) VALUES ("Her Loss", 1, "2x Platinum", 1);
+INSERT INTO albums (title, billboard_200_peak, RIAA_certification, artist_id) VALUES ("Dawn FM", 2, "1x Platinum", 2);
+/* Create table about the people and what they do here */
+
+CREATE TABLE singers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    age INTEGER,
+    country TEXT);
+    
+INSERT INTO singers (name, age, country)
+VALUES
+("Drake", 37, "Canada");
+INSERT INTO singers (name, age, country)
+VALUES
+("The Weeknd", 33, "Canada");
+INSERT INTO singers (name, age, country)
+VALUES
+("Ariana Grande", 30, "United States");
+INSERT INTO singers (name, age, country)
+VALUES
+("Harry Styles", 29, "United Kingdom");
+INSERT INTO singers (name, age, country)
+VALUES
+("Andrea Bocelli", 65, "Italy");
+INSERT INTO singers (name, age, country) VALUES
+("Shakira", 46, "Colombia");
+
+CREATE TABLE singles_2022 (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    artist_id INTEGER,
+    title TEXT,
+    hot_100_peak INTEGER,
+    album_id TEXT);
+    
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak, album_id) VALUES (1, "Sticky", 6, 1);
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak, album_id) VALUES (1, "Massive", 14, 1);
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak, album_id) VALUES (1, "Jimmy Cooks", 1, 1);
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak, album_id) VALUES (1, "Circo Loco", 8, 2);
+
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak, album_id) VALUES (2, "Sacrifice", 11, 3);
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak, album_id) VALUES (2, "Out of Time", 32, 3);
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak, album_id) VALUES (2, "Less Than Zero", 53, 3);
+INSERT INTO singles_2022 (artist_id, title) VALUES (2, "Nothing Is Lost");
+
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak, album_id) VALUES (4, "As It Was", 1, 4);
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak, album_id) VALUES (4, "Late Night Talking", 3, 4);
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak, album_id) VALUES (4, "Music for a Sushi Restaurant", 8, 4);
+
+INSERT INTO singles_2022 (artist_id, title, album_id) VALUES (6, "Don't You Worry", 5);
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak) VALUES (6, "Te Felecito", 67);
+INSERT INTO singles_2022 (artist_id, title, hot_100_peak) VALUES (6, "Monotonia", 65);
+
+
+CREATE TABLE albums (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT,
+    billboard_200_peak INTEGER,
+    RIAA_certification TEXT,
+    artist_id INTEGER);
+    
+INSERT INTO albums (title, billboard_200_peak, RIAA_certification, artist_id) VALUES ("Honestly, Nevermind", 1, "1x Platinum", 1);
+INSERT INTO albums (title, billboard_200_peak, RIAA_certification, artist_id) VALUES ("Her Loss", 1, "2x Platinum", 1);
+INSERT INTO albums (title, billboard_200_peak, RIAA_certification, artist_id) VALUES ("Dawn FM", 2, "1x Platinum", 2);
+INSERT INTO albums (title, billboard_200_peak, RIAA_certification, artist_id) VALUES ("Harry's House", 1, "2x Platinum", 4);
+
+
+-- Which artists released RIAA-certified 2x Platinum albums in 2022? How many singles were released on each of those albums?
+
+SELECT 
+    singers.name AS "Artist", 
+    albums.title AS "Album",
+    albums.RIAA_certification AS "RIAA Certification",
+    COUNT(singles_2022.title) AS "Number of Singles"
+FROM singers
+JOIN albums
+    ON albums.artist_id = singers.id
+JOIN singles_2022
+    ON singles_2022.album_id = albums.id
+WHERE albums.RIAA_certification = "2x Platinum"
+GROUP BY singers.name;
+
+
+-- Which musicians had songs that peaked in the top ten of the Hot 100? What songs were they and which album were they included on?
+
+SELECT 
+    singers.name AS "Artist", 
+    singles_2022.title AS "Single", 
+    singles_2022.hot_100_peak AS "Hot 100 Peak",
+    albums.title AS "Album"
+FROM singers
+JOIN singles_2022 
+    ON singers.id = singles_2022.artist_id
+JOIN albums
+    ON albums.id = singles_2022.album_id
+WHERE singles_2022.hot_100_peak <= 10
+ORDER BY singers.name ASC, singles_2022.hot_100_peak ASC;
+
+
+-- Which singles did not land on an album? List the artist and the single's peak position. 
+
+SELECT
+    singles_2022.title AS "Single",
+    singers.name AS "Artist",
+    singles_2022.hot_100_peak AS "Hot 100 Peak Position"
+FROM singles_2022
+JOIN singers
+    ON singers.id = singles_2022.artist_id
+WHERE singles_2022.album_id IS NULL;
+
+-- Which artists did not release any singles in 2022? Where are they from? 
+
+SELECT 
+    singers.name AS "Singer",
+    singers.country AS "Country",
+    COUNT(singles_2022.title) AS "2022 Singles Released"
+FROM singers
+LEFT JOIN singles_2022
+    ON singers.id = singles_2022.artist_id
+GROUP BY singers.name
+HAVING COUNT(singles_2022.title) = 0
